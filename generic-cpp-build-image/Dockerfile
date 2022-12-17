@@ -12,12 +12,6 @@ RUN apt-get install -y sudo build-essential cmake gcc git pkg-config
 ## Install bash for easier operation in the future
 RUN apt-get install -y bash
 
-# Install python3.7 needed for conan 
-# RUN apt install -y python3.7
-# RUN apt install -y python3-pip
-# RUN python3.7 -m pip install -U MarkupSafe
-# RUN python3.7 -m pip install conan
-
 ##
 # Download gRPC and initialise submodules so as to later install these
 #
@@ -30,6 +24,12 @@ RUN git submodule update --init
 WORKDIR ${BASE_PATH}/test/distrib/cpp
 # Remote location for script: https://raw.githubusercontent.com/grpc/grpc/${RELEASE_TAG}/test/distrib/cpp/run_distrib_test_cmake.sh
 RUN ./run_distrib_test_cmake.sh
+
+# Install python3.7 needed for conan 
+# RUN apt install -y python3.7
+# RUN apt install -y python3-pip
+# RUN python3.7 -m pip install -U MarkupSafe
+# RUN python3.7 -m pip install conan
 
 # Get back to the original directory
 WORKDIR ${BASE_PATH}
