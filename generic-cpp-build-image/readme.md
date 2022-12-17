@@ -2,7 +2,7 @@
 
 Contains tools like gcc, cmake, conan, grpc
 
-Modified the script from [here](https://carolinafernandez.github.io/devops/2020/04/16/gRPC-CPP-environment-in-Docker)
+Reference: it is a modified version of the script from [here](https://carolinafernandez.github.io/devops/2020/04/16/gRPC-CPP-environment-in-Docker)
 
 ## to build 
 
